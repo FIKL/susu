@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<script>
+    //定义一个对象 {} new Object()
+    //属性删除
+    // delete obj 属性
+
+    //自定义属性
+    //object.defineProperty()
+
+    //属性的四个特征
+    // value 属性值
+    // configurable 是否可被delete
+    //writable 是否可写
+    // enumerable 是否可遍历
+    var obj={
+        name:"susu",
+        age:22,
+        email:"fusuhui",
+    }
+    Object.defineProperty(obj,"sex",{
+        value:'女',
+        configurable:true,
+        writable:true,
+        enumerable:true
+
+    })
+    console.log(obj)
+
+    //枚举对象
+    var obj={
+        name:"suus",
+        age:22,
+        email:"suus"
+    }
+    for(k in obj){
+        console.log(k,obj[k])
+    }
+
+    //object.keys
+    var obj={
+        name:"susu",
+        age:22,
+        email:"susuqq.com"
+    }
+    console.log(Object.keys(obj))
+</script>
+</body>
+</html>
