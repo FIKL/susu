@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// //object.getPrototypeOf() 返回参数对象的原型对象的标准方法
+// var F=function (){};
+// var f=new F();
+// Object.getPrototypeOf(f)===F.prototype//true
+// console.log(Object.getPrototypeOf(f))
+// //f 的原型是F.prot.otype
+//
+// //空对象的原型是Object。prototype
+// Object.getPrototypeOf({})===Object.proptype//true
+// console.log(Object.getPrototypeOf({}))
+
+//object.prototype 的原型是null
+// Object.getPrototypeOf(Object.proptype)===null; //true
+
+// //函数的原型是function.prototpeOf
+// function  f(){
+//     Object.getPrototypeOf(f)===Function.prototype//true
+//     console.log(Object.getPrototypeOf(f))
+// }
+var obj1=new Object()
+var obj=new Object()
+console.log(Object .prototype)
+console.log(obj)
+var proto1=Object.getPrototypeOf(obj1)
+console.log(typeof proto1)  //对象
+console.log(obj1)  //{}
+console.log(proto1===Object.prototype) //true
+// console.log(obj1. ===Object.prototype)  //false
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承</title>
+</head>
+<body>
+<script>
+    //继承的本质 让函数的原型指向 另一个类型的实例
+    //创建一个动物类 Animal包含属性和方法
+     function Animal()
+    {
+      name:"noname"
+      age:0
+    }
+    Animal.prototype.name="noname"
+    Animal.prototype.age=0
+    //创建一个猫类Cat 继承Animal 包含自身属性
+    function  Cat()
+    {
+
+    }
+    Cat.prototype=new Animal();
+    Cat.prototype.color="red"
+    function Tiger(){
+
+    }
+    Tiger.prototype=new Cat();
+    var p1=new Cat();
+    var p2=new Tiger();
+    console.log(p2)
+    console.log(p2.color)
+    console.log(p2.age)
+    console.log(p2.name)
+
+
+</script>
+</body>
+</html>

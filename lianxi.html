@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //值传递
+    function add(num)
+    {
+        num++
+    }
+    var a = 123
+    add(a)
+    console.log(a)
+
+    function add(num)
+    {
+        num[0]++
+    }
+
+    var arr = [11]
+    add(arr)
+    console.log(arr[0])
+    //12
+</script>
+</body>
+</html>
