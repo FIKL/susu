@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="btn1">AAA</button>
+<button class="btn1">BBB</button>
+<button class="btn1">CCC</button>
+<button class="btn1">DDD</button>
+<button class="btn1">EEE</button>
+
+
+<script>
+    var btn1=document.querySelectorAll(".btn1");
+    for(var i=0;i<btn1.length;i++){
+        btn1[i].index=i;
+      btn1[i].onclick=function (){
+
+          console.log(this.index)
+      }
+    }
+
+</script>
+</body>
+</html>

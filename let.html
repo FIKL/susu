@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let</title>
+</head>
+<body>
+<script>
+    // let 声明的变量，只在let命令所在的代码块内有效（缩小变量的作用域）
+    //变量不可重复声明
+    //没有变量提升
+    //在代码块内，使用let命令声明变量之前，该变量都是不可用的
+    // console.log(window.a) //未定义 undefined
+    // var a=123
+    // console.log(window.a) //123
+    //
+    // console.log(window.b) //未定义
+    // let b=234
+    // console.log(window.b) //未定义
+
+    //数组赋值
+    // let[a,b,c]=[11,22,33]
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+
+    //对象赋值
+    // let json_obj={
+    //     name:"zhangsan",
+    //     age:22,
+    //     email:"zhangsan@qq.com"
+    // }
+    // //使用与对象属性名一致的变量名
+    // let {name,age,email}=json_obj
+    // console.log(name,age,email)
+    // //使用别名
+    // let {name:n,age:a,email:e}=json_obj
+    // console.log(n,a,e)
+
+    //javascript中的unicode \u{xxx}
+
+    //模板字符串 可以解析变量 计算 调用函数
+    //使用方式``
+    let name="zhangsan"
+    let age1=22
+    let age2=33
+    //使用反引号 ``
+    let str=`姓名:${name},年龄:${age1}`
+    console.log(str)
+    let str2=`a:${age1+age2},b:${age1-age2}`
+    console.log(str2)
+
+    //indexOf 根据索引找到下标
+    var str1="hello World"
+    console.log(str1.indexOf("o"))
+
+    //lastIndexof 根据索引下标找到最后一次出现的位置
+    console.log(str1.lastIndexOf("o"))
+    // includes() 返回布尔值 表示是否找到参数字符串
+    console.log(str1.includes("rld"))
+    //startsWith（）返回布尔值 表示参数字符串是否在元字符串头部
+    console.log(str1.startsWith('h'))
+    //endsWith() 返回布尔值，表示参数字符串是否在原字符串的尾部
+    console.log(str1.endsWith("d"))
+
+    //repeat() 返回一个新的字符串 表示将原字符串重复n次
+     console.log('x'.repeat(3)) //"xxx"
+    console.log('hello'.repeat(2))  //hello hello
+    console.log('susu'.repeat(5))// sususususu
+
+
+    // padStart()用于头部补全
+    console.log(str1.padStart(20,"xx"))
+    console.log(str1.padEnd(20,"xx"))
+
+    //  padEnd() 用于尾部补全
+    //trimStart()消除字符串头部的空格 trimEnd()消除尾部的空格
+</script>
+</body>
+</html>
