@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get set</title>
+</head>
+<body>
+<script>
+  //get 读取属性时触发
+let g={
+    name:"susu",
+    age:18,
+
+    get name(){
+        console.log(1254)
+    },
+    set age(v){
+        console.log(v)
+    }
+}
+g.name
+g.age="78";
+
+
+
+</script>
+
+</body>
+</html>

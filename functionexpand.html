@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数拓展</title>
+</head>
+<body>
+<script>
+    // //y没有赋值默认值为Word 如果y赋值对应布尔值false 先前赋值没有作用
+    // function log(x,y){
+    //     y=y||'Word';
+    //     console.log(x,y);
+    // }
+    // //通常需要先判断参数y是否被赋值 如果没有就等于默认值
+    // if(typeof y==='undefined'){
+    //     y='Word';
+    // }
+    // log("hello")  //hello word
+    // log("hello","China") //hello China
+    // log("hello","")  //hello word
+    // log("")  // word
+    // log("",) //word
+    //
+    // //Es6允许为函数设置默认值 直接写在参数定义的后面
+    // function log1(x,y="Word"){
+    //     // console.log(x,y)
+    // }
+    // log1('hello') //hello word
+    // log1('hello','china') //hello china
+    // log1('hello','')//hello
+    //
+    // function Point (x=0,y=0){
+    //     this.x=x;
+    //     this.y=y;
+    // }
+    // const p=new Point();
+    // console.log(p)
+
+    //参数变量是默认声明的所以不能用let或const再次声明
+    // function foo(x=5){
+    //     let x=1; //error
+    //     const  x=2; //error
+    // }
+    //参数x是默认声明的在函数体内不能重复声明，会报错
+
+    //使用参数默认值时，函数不能同名参数
+    //不报错
+    // function foo(x,x1,y){
+    // console.log(x,x1,y)
+    // }
+    // foo("1","2","1")
+    //报错
+    // function foo(x,x2,y){
+    //     console.log(x,x2,y)
+    // }
+    // foo("a","b","c")
+
+    // //参数默认不是传值，每次重新计算默认值表达式值 参数默认值是惰性求值
+    // let x=99;
+    // function foo(p=x+1){
+    //   console.log(p)
+    // }
+    // foo()  //100
+    // x=200;
+    // foo() //101
+    // foo()
+
+    //与解构赋值默认值结合使用
+    // //参数默认值可以与解构赋值的默认值结合使用
+    // function  foo({x,y=5}){
+    //     console.log(x,y)
+    // }
+    // foo({})  //undefined 5
+    // foo({x:1}) //1 5
+    // foo({x:1,y:2}) // 1 2
+    // foo({},5)
+
+    //函数参数的默认值
+  //   function  foo({x,y=5}={}){
+  //       console.log(x,y)
+  //   }
+  // foo({x:5,y:7}) //5 7
+  // foo() //undefined 5
+
+  //没有提供参数，函数foo的参数默认为一个空对象
+  function  fetch(url,{body='',method='GET',headers={} }){
+
+  }
+
+
+
+
+
+
+</script>
+</body>
+</html>

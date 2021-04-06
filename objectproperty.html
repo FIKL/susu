@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象属性</title>
+</head>
+<body>
+<script>
+// //{}可以写直接写变量和函数 作为对象的属性和方法
+// let name="susu"
+// let age=11
+// let say=()=>{return "hello world"}
+// // console.log(say);
+// //对象中直接使用变量
+// var obj1={name,age,say};
+// console.log(obj1.name)
+// console.log(obj1.age)
+// console.log(obj1.say())
+
+
+// //方法简写
+// let obj0={
+//     say:function (){
+//         console.log("000")
+//     }
+// }
+//
+// let obj2={
+//     say(){
+//         console.log(111)
+//     }
+//
+// }
+// obj0.say()
+// obj2.say()
+//rest参数
+// function test(...arges){
+//   console.log(...arges)
+// }
+// test(11,12)
+//对象的属性名可以是表达式结果  表达式[]
+// obj["he"+"ool"]=123
+
+
+// console.log(obj.foo=true)
+
+//方法表达式
+// let obj = {
+//     ['h' + 'ello']() {
+//         return 'hi';
+//     }
+// };
+//
+// console.log(obj)
+//扩展运算符
+let preson={
+   name:'苏苏',
+   age:18,
+}
+console.log(preson) //{对象}
+
+//将对象preson中可枚举的属性拷贝到p1
+let p1={...preson}
+console.log(p1)
+
+
+let arr=[11,22,33,44,55]
+let arr2={...arr}
+console.log(arr2)//{0: 11, 1: 22, 2: 33, 3: 44, 4: 55}
+
+//如果拓展运算符后边不是对象则会自动转为对象
+ var h={...'hello'}
+ console.log(h)
+//{0: "h", 1: "e", 2: "l", 3: "l", 4: "o"}
+
+var obj1={...Object(true)}
+console.log(obj1)
+</script>
+</body>
+</html>
