@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的属性</title>
+</head>
+<body>
+<script>
+//添加一个属性
+let preson={
+    name:"zhangsan",
+    age:18,
+}
+//向对象中添加属性
+preson.sex="女";
+//通过object.defineProperty()自定义属性
+Object.defineProperty(preson,"char",{
+    value:"苏苏",        //添加属性
+    configurable:true,  //是否可删除
+    enumerable:false,   //是否可枚举
+    writable:true,      //是否可写
+
+})
+//枚举对象  如果自定义属性为不可枚举 那打印就有没添加的属性
+for (k in preson){
+    // console.log(k)
+}
+//向对象中删除属性
+let preson1={
+    name:"zhangsan",
+    age:18,
+}
+delete preson1.name;
+// console.log(preson1)
+
+//Object构造函数
+//Object.assign() 通过复制一个或多个对象来创建新对象
+const arr1={a:1,b:8}
+const arr2={a:2,b:2,c:200}
+const return1=Object.assign(arr1,arr2)
+// console.log(arr1)
+// console.log(arr2)
+//{a:2,b:2,c:200}
+
+//Object.create 使用原型对象和属性创建一个新对象
+const preson2={
+    name:false,
+    say:function (){
+        console.log(`my name is ${this.sex}.Am T susu? ${this.name}`)
+    }
+
+};
+const s=Object.create(preson2)
+// console.log(s.sex="susu");
+// console.log(s.name=true)
+s.say()
+
+
+//Object.defineProperty 自定义属性 给对象添加一个属性并指定该属性的配置
+const  object={
+
+}
+Object.defineProperty(object,)
+</script>
+</body>
+</html>

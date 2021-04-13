@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+<script>
+    //自定义函数 es6之前
+    // function  Preson1(){
+    //     this.name= name
+    //     this.age= age
+    // }
+    // Preson1.prototype.say=function (){
+    //     console.log(this.name,this.age)
+    // }
+    // let p11=new Preson1("藏三","susu")
+    // let p2=new Preson1("苏苏",18)
+    // console.log(p11)
+
+    //自定义函数 es6之后
+    class Preson{
+      //构造器方法 实例化对象会被调用
+        constructor(name,age) {
+            this.name=name
+            this.age=age
+        }
+        say(){
+            console.log(this.name,this.age)
+        }
+    }
+    //通过new+class实例化
+    let p1=new Preson("susu","18")
+    console.log(p1)
+
+
+    //es6之前构造函数
+    function  P(){
+
+    }
+
+    let p=new P();
+    console.log(p.__proto__.constructor)
+
+    //es6当前构造函数
+    class E{
+      //构造方法 constructor
+        constructor(name,age) {
+            this.name=name
+            this.age=age
+        }
+    }
+    let e=new E("苏苏不在啦",18);
+    console.log(e.name)
+
+    //构造函数与构造方法的区别
+
+
+    //getter 读取某个属性触发
+    //setter  设置某个属性
+    //在读写某个属性时（拦截）触发的函数
+    class get{
+        constructor(name,sex) {
+            this.name=name;
+            this.sex=sex;
+        }
+        //当读取name属性时
+        get name(){
+            console.log('垃圾')
+        }
+        //当设置时name属性时
+        set name(value){
+            console.log(value)
+        }
+
+    }
+    let a=new get('灰灰');
+    // console.log(a)
+
+</script>
+</body>
+</html>

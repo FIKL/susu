@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装</title>
+</head>
+<body>
+<script>
+ //php 封装 public protected private
+ //方法的封装与属性的封装，使其不能在类的外部直接访问
+ //类的属性名可以是表达式计算的结果
+ let method= "run";
+ class Preson{
+     //使用[]
+     [method](){
+         console.log("runrunruna")
+     }
+ }
+ let a=new Preson()
+ console.log(a)
+
+ //类表达式
+ //联系函数表达式  函数表达式 将匿名函数赋值给一个变量
+ let fun1=function (){
+     console.log(444)
+ }
+ fun1()
+
+ //类表达式
+ let P=class{
+     vsr(){
+         console.log(111)
+     }
+ }
+ let p1=new P()
+ p1.vsr()
+
+ //module 模块
+ //一个模块就是一个独立的文件，该文件所有的内部所有变量，外部无法获取，如果希望外部的变量，能够读取模块内
+ //的某个变量，就必须使用export关键字输出变量
+
+ //为什么使用模块
+ //方便开发与维护
+
+ //之前实现的方式
+ //commonsjs
+ //AMD
+
+ //严格模式 user strict
+ //ES6模板自动使用
+
+
+
+
+
+
+</script>
+</body>
+</html>
